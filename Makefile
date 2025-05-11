@@ -9,10 +9,14 @@ dump.sql:
 mariadb:
 	docker compose up -d
 
-start: mariadb dump.sql restore_db
+node_modules:
+	npm install
+
+start: node_modules mariadb dump.sql restore_db
 
 stats:
 	docker stats
 
 exec_mariadb_server:
 	docker exec -it mariadb mariadb -A
+
