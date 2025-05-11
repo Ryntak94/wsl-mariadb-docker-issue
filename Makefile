@@ -20,3 +20,5 @@ stats:
 exec_mariadb_server:
 	docker exec -it mariadb mariadb -A
 
+exec_mariadb_container:
+	docker exec -it mariadb sh
